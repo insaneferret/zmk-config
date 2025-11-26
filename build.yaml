@@ -20,16 +20,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: tidbit
-include:
-  - board: nice_nano_v2
-    shield: tidbit
-include:
-  - board: nice_nano_v2
-    shield: romac
-include:
-  - board: nice_nano_v2
-    shield: tester_pro_micro
-include:
-  - board: nice_nano_v2
     shield: tester_pro_micro
