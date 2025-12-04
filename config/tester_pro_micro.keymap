@@ -1,61 +1,17 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-
-#define PIN_MACRO(name, pin) \
-/ { \
-    macros { \
-        name: name { \
-            compatible = "zmk,behavior-macro"; \
-            wait-ms = <5>; \
-            tap-ms = <5>; \
-            #binding-cells = <0>; \
-            bindings = <&kp P &kp I &kp N &kp SPACE>, pin, <&kp ENTER>; \
-        }; \
-    }; \
-};
-
-PIN_MACRO(pin0, <&kp N0>)
-PIN_MACRO(pin1, <&kp N1>)
-PIN_MACRO(pin2, <&kp N2>)
-PIN_MACRO(pin3, <&kp N3>)
-PIN_MACRO(k1, <&kp N4>)
-PIN_MACRO(k2, <&kp N5>)
-PIN_MACRO(k3, <&kp N6>)
-PIN_MACRO(k4, <&kp N7>)
-PIN_MACRO(k5, <&kp N8>)
-PIN_MACRO(k6, <&kp N9>)
-PIN_MACRO(k7, <&kp N1 &kp N0>)
-PIN_MACRO(pin14, <&kp N1 &kp N4>)
-PIN_MACRO(pin15, <&kp N1 &kp N5>)
-PIN_MACRO(pin16, <&kp N1 &kp N6>)
-PIN_MACRO(pin18, <&kp N1 &kp N8>)
-PIN_MACRO(pin19, <&kp N1 &kp N9>)
-PIN_MACRO(pin20, <&kp N2 &kp N0>)
-PIN_MACRO(pin21, <&kp N2 &kp N1>)
-
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <&pin0
-                        &pin1
-                        &pin2
-                        &pin3
-                        &pin4
-                        &pin5
-                        &pin6
-                        &pin7
-                        &pin8
-                        &pin9
-                        &pin10
-                        &pin14
-                        &pin15
-                        &pin16
-                        &pin18
-                        &pin19
-                        &pin20
-                        &pin21>;
+            bindings = <
+                &kp N0    // K1 - P0.22
+                &kp N1    // K2 - P0.24
+                &kp N2    // K3 - P1.00
+                &kp N3    // K4 - P0.11
+                &kp N4    // K5 - P1.04
+                &kp N5    // K6 - P1.06
+                &kp N6    // K7 - P0.09
+            >;
         };
     };
 };
